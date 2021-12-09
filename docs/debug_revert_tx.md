@@ -28,7 +28,7 @@ Great, so how to return to the initial state? Note that the transaction I showed
 
 > Stores everything kept in the full node and builds an archive of historical states. Needed if you want to query something like an account balance at block #4,000,000, or simply and reliably test your own transactions set without mining them using OpenEthereum
 
-### Get a remote archive nodes
+### Get a remote archive node
 
 Surely you don't want to set up an archive node by yourself just for debugging a transaction, given the huge amount of storage it needs. The good news is that there are some providers hosting it for free, like [Alchemy](https://www.alchemy.com/), [Moralis](https://moralis.io/). Here we'll try Moralis for the BSC testnet archive node that my transaction was running against.
 
