@@ -18,7 +18,7 @@ For _#1_ there are some online tools, like [Tenderly](https://tenderly.co/). The
 From now on we'll be talking about how to do _#2_, which may sound very time-consuming from the first blush but actually much simpler. Before we do that, there are some good practice you should follow to make your contract debugging convenient in general:
 
 1. Always use **source control** (like Git) to manage your contract code as well as compile options, which are usually configured in _truffle-config.js_ or _hardhat.config.js_.
-2. After each deployment, **write down** the _addresses of all your contracts_, including their _Git commit hash_, so that you can re-compile your contracts should a debug is required.
+2. After each deployment, **write down** the _addresses of all your contracts_, including their corresponding _Git commit hash_, so that you can re-compile your contracts should a debug is required.
 
 ## Set up a replay environment
 
@@ -37,6 +37,12 @@ Surely you don't want to set up an archive node by yourself just for debugging a
 3. Click BSC network endpoints. There should be endpoint links popping up, you can choose the test archive one.
 
 ### Set up Hardhat environment
+
+Hardhat provides a convenient way to work with archive node via its [forking](https://hardhat.org/hardhat-network/guides/mainnet-forking.html) mode. By its description,
+
+> You can start an instance of Hardhat Network that forks mainnet. This means that it will simulate having the same state as mainnet, but it will work as a local development network. That way you can interact with deployed protocols and test complex interactions locally.
+
+Note that forking works with testnet as well. Essentially it pulls your matching contract's bytecode and storage from the block you specified, then starts a local EVM with the pulled state when you are submitting your transaction to your local network. If you don't consider the original ordering of your transaction within that block, you pretty much can reproduce the same run.
 
 Now we need to compile our contract to the one that matches the deployed one.
 
