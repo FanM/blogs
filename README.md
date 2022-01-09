@@ -10,7 +10,7 @@
 
 ### Games
 
-[Basketball League on Blockchain](https://github.com/FanM/blob_contracts/README.md)
+[Basketball League on Blockchain](https://github.com/FanM/blob_contracts)
 
 ### Misc
 
