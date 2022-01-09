@@ -1,12 +1,16 @@
 ## Blockchains
 
-### Contracts
+### Contract development
 
 [How to debug a reverted transaction from a deployed contract](./docs/debug_revert_tx.md)
 
+### Security
+
+[A brief analysis of the counterparty risk in Connext protocol](./docs/connext_counterparty_risk.md)
+
 ### Games
 
-[Basketball League on Blockchain](https://github.com/FanM/blob_game/blob/main/manuals/en/manual.md)
+[Basketball League on Blockchain](https://github.com/FanM/blob_contracts/README.md)
 
 ### Misc
 
