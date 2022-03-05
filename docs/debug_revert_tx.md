@@ -77,7 +77,7 @@ Now we need to compile our contract to the one that matches the deployed one.
          accounts: [
            {
              privateKey: `0x${YOUR_PRIVATEKEY}`,
-             balance: "6099790543585293709",
+             balance: "1000000000000000000",
            },
          ],
        },
@@ -85,7 +85,7 @@ Now we need to compile our contract to the one that matches the deployed one.
    };
    ```
 
-   Under _networks.harhat.forking_, the _url_ is the archive node endpoint and _blockNumber_ the block where the transaction was first included. The _accounts_ should include the one that initiated that transaction for a strict repro. You can choose other accounts if it doesn't matter in your transaction logic. Also, you can bump up the _localhost.timeout_ if your transaction needs more time to run.
+   Under _networks.harhat.forking_, the _url_ is the archive node endpoint and _blockNumber_ the block where the transaction was first included. The _accounts_ should include the one that initiated that transaction for a strict repro. You may specify a new _balance_ and it will replace the original balance of this account. You can choose other accounts if it doesn't matter in your transaction logic. Also, you can bump up the _localhost.timeout_ if your transaction needs more time to run.
 
 4. Add a Hardhat task to submit the transaction. For demo purpose, I'll use my original contract call. You should create your own.
 
